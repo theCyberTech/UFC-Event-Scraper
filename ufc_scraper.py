@@ -27,9 +27,10 @@ class Scraper:
             self.fight_time_main = self.event.find("div", class_="c-card-event--result__date tz-change-data")
             self.fight_location = self.event.find("div", class_="field field--name-taxonomy-term-title field--type-ds field--label-hidden field__item")
             
-            print(self.fight.text.strip())
-            print(self.fight_time_main.text.strip())
-            print(self.fight_location.text.strip())
+            print(f'Main Event: {self.fight.text.strip()}')
+            print(f'Date: {self.fight_time_main.text.strip()}')
+            print(f'Location: {self.fight_location.text.strip()}')
+            print()
 
 def main():
 
